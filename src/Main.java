@@ -69,11 +69,11 @@ public class Main {
             System.out.println("5 - Exit");
             command = scanner.nextLine();
             if ("1".equals(command)) {
-                System.out.println("packageID" + "\t\t" +"memberName" + "\t\t" + "totalCount" + "\t\t" + "completedSession" + "\t\t" + "description");
+                System.out.println("packageID" + "\t" +"memberName" + "\t" + "description"+  "\t" + "totalCount" + "\t" + "completedSession"  );
                 Map<Integer, TrainingPackage> packages = trainer.savePackages();
                 for (Integer key : packages.keySet()) {
                     TrainingPackage trainingPackage = packages.get(key);
-                    System.out.println(trainingPackage.getPackageID() + "\t\t"  + trainingPackage.getMemberName()  + "\t\t" +trainingPackage.getDescription() + "\t\t" + trainingPackage.getTotalCount() + "\t\t" + trainingPackage.getCompletedSession());
+                    System.out.println(trainingPackage.getPackageID() + "\t\t\t"  + trainingPackage.getMemberName()  + "\t\t\t" +trainingPackage.getDescription() + "\t\t\t" + trainingPackage.getTotalCount() + "\t\t\t" + trainingPackage.getCompletedSession());
                 }
             }else if ("2".equals(command)) {
                 System.out.println("Enter the packageID: ");
